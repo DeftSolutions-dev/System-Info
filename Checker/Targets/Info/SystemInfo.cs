@@ -27,9 +27,7 @@ namespace Checker
                     var iLen = sData.Split(new char[] { ' ' })[0].Length;
                     sData = sData.Substring(iLen).TrimStart().TrimEnd();
                 }
-            }
-            catch  
-                return "Error"; 
+            }catch {return "Error"; } 
             return sData;
         }
         private static string GetBitVersion() // Получение битности
@@ -43,9 +41,7 @@ namespace Checker
                     return "(32 Bit)";
                 else
                     return "(64 Bit)";
-            }
-            catch  
-                return "Error"; 
+            }catch {return "Error"; } 
         }
         
         public static string ScreenMetrics() // Получение разрешение экрана
@@ -75,9 +71,7 @@ namespace Checker
                          GPU = mObject["Name"] + $"\n     ID: {mObject["SerialNumber"]}"; 
                 }
                 return GPU;
-            }
-            catch 
-                return "Error"; 
+            }catch {return "Error"; } 
         }
         public static string GetCPU() // Получение инфу процессора
         {
@@ -88,9 +82,7 @@ namespace Checker
                 foreach (var mObject in mSearcher.Get())
                     CPU = mObject["Name"] + $" [{mObject["NumberOfCores"]}/{mObject["NumberOfLogicalProcessors"]}]" + $"\n     ID: {mObject["ProcessorId"]}";
                 return CPU;
-            }
-            catch  
-                return "Error"; 
+            }catch {return "Error"; } 
         }
         public static string GetRAM() // Получаем инфу RAM
         {
@@ -112,9 +104,7 @@ namespace Checker
                     break;
                 }
                 return RamAmount.ToString() + "MB" + $"\n     ID: {RAM}";
-            }
-            catch 
-                return "Error"; 
+            }catch {return "Error"; } 
         } 
         public static string GetGPU() // Получаем инфу видеокарты
         {
@@ -130,9 +120,7 @@ namespace Checker
                     GPU = mObject["Name"] + $" [{GPUAmount}MB]";
                 } 
                 return GPU;
-            }
-            catch  
-                return "Error"; 
+            }catch {return "Error"; }  
         }
         public static string GetSMBIOS() // Получаем инфу об материнки
         {
@@ -145,9 +133,7 @@ namespace Checker
                     GPU = mObject["Product"] + $"\n     ID: {mObject["SerialNumber"]}";
                 }
                 return GPU;
-            }
-            catch  
-                return "Error"; 
+            }catch {return "Error"; } 
         }
         public static string GetMAC() // Получаем инфу об MAC Address
         {
@@ -160,9 +146,7 @@ namespace Checker
                     MAC = mObject["Name"] + $"\n     ID: {mObject["MACAddress"]}";
                 }
                 return MAC;
-            }
-            catch  
-                return "Error"; 
+            }catch {return "Error"; }  
         }
         public static string GetPhysicalMemory() // Получаем инфу об PhysicalMemory
         {
@@ -173,9 +157,7 @@ namespace Checker
                 foreach (var mObject in mSearcher.Get()) 
                     PhysicalMemory = mObject["PartNumber"].ToString(); 
                 return PhysicalMemory;
-            }
-            catch 
-                return "Error"; 
+            }catch {return "Error"; } 
         }
     }
 }
