@@ -8,8 +8,8 @@ namespace Checker
 {
     class SystemInfo
     { 
-        public static string username = Environment.UserName; 
-        public static string compname = Environment.MachineName;
+        public static string username = Environment.UserName; // User Name PC
+        public static string compname = Environment.MachineName; 
         public static string GetSystemVersion() // Получение версии виндовс
         {
             return GetWindowsVersionName() + " " + GetBitVersion();
