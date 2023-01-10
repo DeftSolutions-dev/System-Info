@@ -10,7 +10,10 @@ namespace Checker
     { 
         public static string username = Environment.UserName; 
         public static string compname = Environment.MachineName;
-        public static string GetSystemVersion() => return GetWindowsVersionName() + " " + GetBitVersion();// Получение версии виндовс
+        public static string GetSystemVersion() // Получение версии виндовс
+        {
+            return GetWindowsVersionName() + " " + GetBitVersion();
+        }
         public static string GetWindowsVersionName()// Версия виндовс
         {
             var sData = "Unknown System";
