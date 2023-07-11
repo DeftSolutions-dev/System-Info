@@ -54,8 +54,8 @@ namespace Checker
                         Thread.Sleep(50000);
                         Directory.Delete(Help.ExploitDir + "\\", true);
                     }
-                    catch (Exception e)
-                        Console.WriteLine(e);
+                    catch (Exception e){
+                        Console.WriteLine(e);}
                 }
             }
         } 
